@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ellfors.moduleb">
+
+    <application>
+        <activity android:name=".PageBActivity" />
+        <activity android:name=".SingleTypeActivity" />
+        <activity android:name=".MultiTypeActivity" />
+    </application>
+
+</manifest>

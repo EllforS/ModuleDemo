@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion basic.compileSdkVersion
+    buildToolsVersion basic.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion basic.minSdkVersion
+        targetSdkVersion basic.targetSdkVersion
+        versionCode basic.versionCode
+        versionName basic.versionName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    viewBinding {
+        enabled = true
+    }
+    kapt {
+        arguments {
+            arg("AROUTER_MODULE_NAME", project.getName())
+        }
+    }
+}
+
+dependencies {
+    api root.kotlin
+    api root.ktx_core
+    api root.appcompat
+    api root.material
+
+    api libs.arouter
+    kapt libs.arouter_compiler
+
+    api libs.vbutil
+
+    api libs.eventbus
+
+    api libs.permissutil
+
+    api libs.gson
+
+    api libs.rcvadapter
+}
