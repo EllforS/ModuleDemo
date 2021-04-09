@@ -2,9 +2,9 @@ package com.ellfors.moduleb
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.ellfors.common.RouterKey
+import com.ellfors.common.constants.RouterKey
 import com.ellfors.common.base.BaseActivity
-import com.ellfors.common.toast
+import com.ellfors.common.util.toast
 import com.ellfors.moduleb.adapter.SingleTypeAdapter
 import com.ellfors.moduleb.databinding.ActivitySingleTypeBinding
 

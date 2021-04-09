@@ -1,8 +1,10 @@
 package com.ellfors.common
 
-import android.util.Log
 import com.ellfors.common.base.BaseActivity
+import com.ellfors.common.constants.RouterKey
 import com.ellfors.common.databinding.ActivitySplashBinding
+import com.ellfors.common.entity.SampleARouterBean
+import com.ellfors.common.util.open
 
 /**
  * SplashActivity

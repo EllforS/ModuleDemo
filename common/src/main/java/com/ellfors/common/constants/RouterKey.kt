@@ -1,4 +1,4 @@
-package com.ellfors.common
+package com.ellfors.common.constants
 
 /**
  * RouterKey

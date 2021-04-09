@@ -3,13 +3,12 @@ package com.ellfors.common
 import android.content.Context
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.facade.service.SerializationService
-import com.google.gson.Gson
+import com.ellfors.common.util.JsonUtil
 import java.lang.NullPointerException
-import java.lang.RuntimeException
 import java.lang.reflect.Type
 
 /**
- * SampleARouterBean
+ * ARouter传递Object解析类
  * 2021-04-02 10:43
  */
 @Route(path = "/common/json")

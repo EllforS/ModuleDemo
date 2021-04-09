@@ -1,4 +1,4 @@
-package com.ellfors.common
+package com.ellfors.common.util
 
 import android.app.Activity
 import android.content.Context

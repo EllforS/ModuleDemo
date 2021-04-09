@@ -1,11 +1,11 @@
 package com.ellfors.moduleb
 
-import android.annotation.SuppressLint
-import android.webkit.WebSettings
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.ellfors.common.*
 import com.ellfors.common.base.BaseActivity
+import com.ellfors.common.constants.RouterKey
+import com.ellfors.common.entity.SampleEvent
+import com.ellfors.common.util.injectRouter
 import com.ellfors.moduleb.databinding.ActivityPageBBinding
 import org.greenrobot.eventbus.EventBus
 

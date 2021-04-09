@@ -1,12 +1,15 @@
 package com.ellfors.modulea
 
 import android.annotation.SuppressLint
-import android.os.Environment
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.alibaba.android.arouter.launcher.ARouter
-import com.ellfors.common.*
 import com.ellfors.common.base.BaseActivity
+import com.ellfors.common.base.BaseEvent
+import com.ellfors.common.constants.RouterKey
+import com.ellfors.common.entity.SampleARouterBean
+import com.ellfors.common.entity.SampleEvent
+import com.ellfors.common.util.injectRouter
+import com.ellfors.common.util.open
 import com.ellfors.modulea.databinding.ActivityPageABinding
 import com.yanzhenjie.permission.AndPermission
 import com.yanzhenjie.permission.runtime.Permission
@@ -68,6 +71,8 @@ class PageAActivity : BaseActivity<ActivityPageABinding>() {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onEvent(event: SampleEvent?) {
-        mBinding.btnPageb.text = event?.value ?: "PAGE_B"
+        if (event?.getType != BaseEvent.EVENT_PAGE_A)
+            return
+        mBinding.btnPageb.text = event.value ?: "PAGE_B"
     }
 }

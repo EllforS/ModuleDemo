@@ -1,4 +1,4 @@
-package com.ellfors.common
+package com.ellfors.common.util
 
 import android.content.Context
 import android.content.res.AssetManager
