@@ -58,13 +58,5 @@ dependencies {
 
     implementation project(path: ':common')
     kapt libs.arouter_compiler
-
-
-//    implementation 'org.apache.poi:poi:3.17'
-//    // Excel XLS
-//    implementation 'org.apache.poi:poi-ooxml:3.17'
-//    // Excel XLSX DOCX
-//    implementation 'org.apache.poi:poi-scratchpad:3.17'
-//    // Word DOC
-//    implementation 'org.apache.poi:poi-ooxml-schemas:3.17'
+    kapt libs.glide_compiler
 }

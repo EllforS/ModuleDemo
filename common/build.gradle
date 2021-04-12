@@ -43,6 +43,13 @@ dependencies {
     api root.ktx_core
     api root.appcompat
     api root.material
+    api root.lifecycle_runtime
+    api root.lifecycle_livedata
+    api root.lifecycle_viewmodel
+    api root.lifecycle_extensions
+    api root.lifecycle_java8
+    api root.lifecycle_service
+    api root.lifecycle_process
 
     api libs.arouter
     kapt libs.arouter_compiler
@@ -56,4 +63,7 @@ dependencies {
     api libs.gson
 
     api libs.rcvadapter
+
+    api libs.glide
+    kapt libs.glide_compiler
 }

@@ -52,6 +52,10 @@ class PageAActivity : BaseActivity<ActivityPageABinding>() {
         mBinding.btnMulti.setOnClickListener {
             open(RouterKey.ModuleB.MULTI_TYPE)
         }
+
+        mBinding.btnImage.setOnClickListener {
+            open(RouterKey.ModuleB.IMAGE)
+        }
     }
 
     override fun onDestroy() {

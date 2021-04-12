@@ -38,4 +38,11 @@
         android:layout_marginTop="10dp"
         android:text="multi type adapter" />
 
+    <Button
+        android:id="@+id/btn_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="image" />
+
 </LinearLayout>

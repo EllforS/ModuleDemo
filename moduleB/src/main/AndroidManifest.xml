@@ -6,6 +6,7 @@
         <activity android:name=".PageBActivity" />
         <activity android:name=".SingleTypeActivity" />
         <activity android:name=".MultiTypeActivity" />
+        <activity android:name=".ImageActivity" />
     </application>
 
 </manifest>

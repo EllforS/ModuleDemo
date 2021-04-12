@@ -22,5 +22,6 @@ object RouterKey {
         const val PAGE_B = "$MODULE_B/page_B"
         const val SINGLE_TYPE = "$MODULE_B/single_type"
         const val MULTI_TYPE = "$MODULE_B/multi_type"
+        const val IMAGE = "$MODULE_B/image"
     }
 }
