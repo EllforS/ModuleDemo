@@ -2,17 +2,11 @@ package com.ellfors.common.util
 
 import android.app.Activity
 import android.content.Context
-import android.graphics.drawable.Drawable
 import android.widget.ImageView
 import android.widget.Toast
 import com.alibaba.android.arouter.facade.Postcard
 import com.alibaba.android.arouter.launcher.ARouter
-import com.bumptech.glide.Glide
-import com.bumptech.glide.RequestBuilder
-import com.bumptech.glide.RequestManager
-import com.bumptech.glide.request.BaseRequestOptions
-import com.bumptech.glide.request.RequestOptions
-import com.ellfors.common.base.BaseApplication
+import com.ellfors.common.app.BaseApp
 import com.ellfors.common.image.ImageLoader
 
 /**
@@ -25,7 +19,7 @@ fun Activity.injectRouter() {
 /**
  * 吐司
  */
-fun String?.toast(context: Context? = BaseApplication.context, duration: Int = Toast.LENGTH_SHORT) {
+fun String?.toast(context: Context? = BaseApp.context, duration: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(context, this ?: "", duration).show()
 }
 

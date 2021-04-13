@@ -4,7 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import androidx.core.content.FileProvider
-import com.ellfors.common.base.BaseApplication
+import com.ellfors.common.app.BaseApp
 import java.io.File
 import java.util.*
 
@@ -151,7 +151,7 @@ object OpenFileUtil {
     private fun buildUri(path: String?): Uri? {
         if (path == null) return null
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            FileProvider.getUriForFile(BaseApplication.context,
+            FileProvider.getUriForFile(BaseApp.context,
                 AUTHORITY, File(path))
         } else {
             Uri.fromFile(File(path))
