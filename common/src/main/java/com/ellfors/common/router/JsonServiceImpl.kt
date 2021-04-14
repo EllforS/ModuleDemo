@@ -1,4 +1,4 @@
-package com.ellfors.common
+package com.ellfors.common.router
 
 import android.content.Context
 import com.alibaba.android.arouter.facade.annotation.Route

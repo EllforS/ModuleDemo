@@ -66,11 +66,11 @@ class ImageLoader(private val mContext: Context) {
             ImageOptions.TYPE.CIRCLE_CROP -> RequestOptions.circleCropTransform()
             ImageOptions.TYPE.FIT_CENTER -> RequestOptions.fitCenterTransform()
             ImageOptions.TYPE.CENTER_INSIDE -> RequestOptions.centerInsideTransform()
-            else -> null
+            else -> RequestOptions.centerCropTransform()
         }
         Glide.with(mContext)
             .load(mOptions.url)
-            .apply(options!!.placeholder(mOptions.placeholder).error(mOptions.error))
+            .apply(options.placeholder(mOptions.placeholder).error(mOptions.error))
             .into(imageView)
     }
 }

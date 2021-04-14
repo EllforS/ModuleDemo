@@ -1,6 +1,5 @@
 package com.ellfors.moduleb
 
-import android.content.Intent
 import androidx.recyclerview.widget.GridLayoutManager
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.ellfors.common.base.BaseActivity
@@ -13,7 +12,7 @@ import com.ellfors.moduleb.entity.ImageEntity
  * ImageActivity
  * 2021-04-12 16:07
  */
-@Route(path = RouterKey.ModuleB.IMAGE)
+@Route(path = RouterKey.ModuleB.IMAGE, extras = 1)
 class ImageActivity : BaseActivity<ActivityImageBinding>() {
 
     override fun init() {

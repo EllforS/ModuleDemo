@@ -42,10 +42,10 @@ fun Activity.open(path: String, build: Postcard.() -> Unit = {}) {
 /**
  * ARouter页面跳转
  */
-fun Context.open(path: String, build: Postcard.() -> Unit = {}) {
+fun open(path: String, build: Postcard.() -> Unit = {}) {
     val postcard = ARouter.getInstance().build(path)
     postcard.build()
-    postcard.navigation(this)
+    postcard.navigation()
 }
 
 /**
