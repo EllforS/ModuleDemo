@@ -6,10 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import com.chad.library.adapter.base.BaseBinderAdapter
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter
+import com.chad.library.adapter.base.BaseProviderMultiAdapter
 import com.chad.library.adapter.base.binder.QuickItemBinder
 import com.chad.library.adapter.base.binder.QuickViewBindingItemBinder
 import com.chad.library.adapter.base.entity.MultiItemEntity
 import com.chad.library.adapter.base.listener.GridSpanSizeLookup
+import com.chad.library.adapter.base.provider.BaseItemProvider
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.dylanc.viewbinding.base.inflateBindingWithGeneric
 import com.ellfors.common.base.BaseRcvMultiAdapter

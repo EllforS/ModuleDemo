@@ -4,10 +4,8 @@ import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.ellfors.common.base.BaseActivity
 import com.ellfors.common.constants.RouterKey
-import com.ellfors.common.entity.SampleEvent
 import com.ellfors.common.util.injectRouter
 import com.ellfors.moduleb.databinding.ActivityPageBBinding
-import org.greenrobot.eventbus.EventBus
 
 
 /**
@@ -27,7 +25,7 @@ class PageBActivity : BaseActivity<ActivityPageBBinding>() {
         mBinding.btnBack.apply {
             text = mValue
             setOnClickListener {
-                EventBus.getDefault().post(SampleEvent(3, "回调"))
+                mShareDataBus.mTestText.value = "测试DataBus"
                 finish()
             }
         }

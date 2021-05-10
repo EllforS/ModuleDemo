@@ -19,8 +19,6 @@ ext {
 
             vbutil_ver     : "1.1.0",
 
-            eventbus_ver   : "3.2.0",
-
             permissutil_ver: "2.0.3",
 
             gson_ver       : "2.8.2",
@@ -47,8 +45,6 @@ ext {
             arouter_compiler: "com.alibaba:arouter-compiler:$ver.arouter_ver",
 
             vbutil          : "com.dylanc:viewbinding-base-ktx:$ver.vbutil_ver",
-
-            eventbus        : "org.greenrobot:eventbus:$ver.eventbus_ver",
 
             permissutil     : "com.yanzhenjie:permission:$ver.permissutil_ver",
 

@@ -3,16 +3,18 @@ package com.ellfors.common.app
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
-import android.util.Log
+import androidx.lifecycle.ViewModelStore
+import androidx.lifecycle.ViewModelStoreOwner
 import com.alibaba.android.arouter.launcher.ARouter
 import com.ellfors.common.BuildConfig
+import com.ellfors.common.livedata.ShareDataBus
 import java.lang.Exception
 
 /**
  * BaseApplication
  * 2021-03-25 16:51
  */
-open class BaseApp : Application() {
+open class BaseApp : Application(), ViewModelStoreOwner {
 
     private val mAppList = mutableListOf(
         "com.ellfors.modulea.app.ModuleAApplication",
@@ -24,6 +26,10 @@ open class BaseApp : Application() {
         lateinit var context: Context
     }
 
+    private val mViewModelStore: ViewModelStore by lazy {
+        ViewModelStore()
+    }
+
     override fun onCreate() {
         super.onCreate()
         context = this
@@ -33,7 +39,6 @@ open class BaseApp : Application() {
     }
 
     private fun initData() {
-        Log.d("AAAA", "BaseApp is init")
 
         if (BuildConfig.DEBUG) {
             ARouter.openLog()
@@ -56,5 +61,9 @@ open class BaseApp : Application() {
                 e.printStackTrace()
             }
         }
+    }
+
+    override fun getViewModelStore(): ViewModelStore {
+        return mViewModelStore
     }
 }

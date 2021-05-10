@@ -1,21 +1,17 @@
 package com.ellfors.modulea
 
 import android.annotation.SuppressLint
+import androidx.lifecycle.observe
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.ellfors.common.base.BaseActivity
-import com.ellfors.common.base.BaseEvent
 import com.ellfors.common.constants.RouterKey
 import com.ellfors.common.entity.SampleARouterBean
-import com.ellfors.common.entity.SampleEvent
 import com.ellfors.common.util.injectRouter
 import com.ellfors.common.util.open
 import com.ellfors.modulea.databinding.ActivityPageABinding
 import com.yanzhenjie.permission.AndPermission
 import com.yanzhenjie.permission.runtime.Permission
-import org.greenrobot.eventbus.EventBus
-import org.greenrobot.eventbus.Subscribe
-import org.greenrobot.eventbus.ThreadMode
 
 /**
  * PageAActivity
@@ -31,12 +27,15 @@ class PageAActivity : BaseActivity<ActivityPageABinding>() {
     @SuppressLint("SetTextI18n")
     override fun init() {
         injectRouter()
-        EventBus.getDefault().register(this)
 
         requestMyPermissions()
 
         mSampleBean?.apply {
             mBinding.tvTest.text = (valueA ?: "A空") + valueB
+        }
+
+        mShareDataBus.mTestText.observe(this) {
+            mBinding.btnPageb.text = it ?: "空！！！"
         }
 
         mBinding.btnPageb.setOnClickListener {
@@ -58,11 +57,6 @@ class PageAActivity : BaseActivity<ActivityPageABinding>() {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        EventBus.getDefault().unregister(this)
-    }
-
     private fun requestMyPermissions() {
         AndPermission.with(this)
             .runtime()
@@ -71,12 +65,5 @@ class PageAActivity : BaseActivity<ActivityPageABinding>() {
                 finish()
             }
             .start()
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onEvent(event: SampleEvent?) {
-        if (event?.getType != BaseEvent.EVENT_PAGE_A)
-            return
-        mBinding.btnPageb.text = event.value ?: "PAGE_B"
     }
 }

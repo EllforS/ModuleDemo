@@ -22,27 +22,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="page_B" />
+        android:text="Page_B"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn_single"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="single type adapter" />
+        android:text="Single Type Adapter"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn_multi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="multi type adapter" />
+        android:text="Multi Type Adapter"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="image" />
+        android:text="Image"
+        android:textAllCaps="false" />
 
 </LinearLayout>

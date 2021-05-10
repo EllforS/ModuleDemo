@@ -1,5 +1,6 @@
 package com.ellfors.common
 
+import android.view.View
 import com.ellfors.common.base.BaseActivity
 import com.ellfors.common.constants.RouterKey
 import com.ellfors.common.databinding.ActivitySplashBinding
@@ -16,9 +17,11 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
 //        ARouter.getInstance()
 //            .build(RouterKey.ModuleA.PAGE_A)
 //            .navigation()
-        open(RouterKey.ModuleA.PAGE_A) {
-            withObject(RouterKey.ModuleA.EXTRA_TEST, SampleARouterBean("字符串", 100))
+
+        mBinding.btnNavigate.setOnClickListener {
+            open(RouterKey.ModuleA.PAGE_A) {
+                withObject(RouterKey.ModuleA.EXTRA_TEST, SampleARouterBean("字符串", 100))
+            }
         }
-        finish()
     }
 }

@@ -56,8 +56,6 @@ dependencies {
 
     api libs.vbutil
 
-    api libs.eventbus
-
     api libs.permissutil
 
     api libs.gson
