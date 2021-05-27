@@ -13,7 +13,6 @@ import com.chad.library.adapter.base.entity.MultiItemEntity
 import com.chad.library.adapter.base.listener.GridSpanSizeLookup
 import com.chad.library.adapter.base.provider.BaseItemProvider
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
-import com.dylanc.viewbinding.base.inflateBindingWithGeneric
 import com.ellfors.common.base.BaseRcvMultiAdapter
 import com.ellfors.moduleb.R
 import com.ellfors.moduleb.databinding.ItemMultiABinding

@@ -12,7 +12,7 @@ import com.ellfors.common.image.ImageLoader
 /**
  * ARouter注入数据
  */
-fun Activity.injectRouter() {
+fun Any.injectRouter() {
     ARouter.getInstance().inject(this)
 }
 
@@ -35,17 +35,10 @@ fun Activity.open(path: String, requestCode: Int, build: Postcard.() -> Unit = {
 /**
  * ARouter页面跳转
  */
-fun Activity.open(path: String, build: Postcard.() -> Unit = {}) {
-    open(path, -1, build)
-}
-
-/**
- * ARouter页面跳转
- */
-fun open(path: String, build: Postcard.() -> Unit = {}) {
+fun open(path: String, build: Postcard.() -> Unit = {}): Any? {
     val postcard = ARouter.getInstance().build(path)
     postcard.build()
-    postcard.navigation()
+    return postcard.navigation()
 }
 
 /**

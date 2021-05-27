@@ -4,12 +4,12 @@ import android.annotation.SuppressLint
 import androidx.lifecycle.observe
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.ellfors.common.base.BaseActivity
+import com.ellfors.common.base.BaseFragment
 import com.ellfors.common.constants.RouterKey
 import com.ellfors.common.entity.SampleARouterBean
 import com.ellfors.common.util.injectRouter
 import com.ellfors.common.util.open
-import com.ellfors.modulea.databinding.ActivityPageABinding
+import com.ellfors.modulea.databinding.FragmentPageABinding
 import com.yanzhenjie.permission.AndPermission
 import com.yanzhenjie.permission.runtime.Permission
 
@@ -18,7 +18,7 @@ import com.yanzhenjie.permission.runtime.Permission
  * 2021-03-25 16:48
  */
 @Route(path = RouterKey.ModuleA.PAGE_A)
-class PageAActivity : BaseActivity<ActivityPageABinding>() {
+class PageAActivity : BaseFragment<FragmentPageABinding>() {
 
     @JvmField
     @Autowired(name = RouterKey.ModuleA.EXTRA_TEST)
@@ -26,7 +26,7 @@ class PageAActivity : BaseActivity<ActivityPageABinding>() {
 
     @SuppressLint("SetTextI18n")
     override fun init() {
-        injectRouter()
+//        injectRouter()
 
         requestMyPermissions()
 
@@ -62,7 +62,7 @@ class PageAActivity : BaseActivity<ActivityPageABinding>() {
             .runtime()
             .permission(Permission.Group.STORAGE)
             .onDenied {
-                finish()
+                activity?.finish()
             }
             .start()
     }

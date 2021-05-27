@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.viewbinding.ViewBinding
 import com.chad.library.adapter.base.BaseBinderAdapter
 import com.chad.library.adapter.base.binder.QuickViewBindingItemBinder
-import com.dylanc.viewbinding.base.inflateBindingWithGeneric
+import com.ellfors.common.util.inflateBindingWithGeneric
 
 /**
  * BaseRcvMultiAdapter

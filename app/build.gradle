@@ -39,6 +39,7 @@ dependencies {
         implementation project(path: ':common')
     } else {
         implementation project(path: ':common')
+        implementation project(path: ':module_main')
         implementation project(path: ':moduleA')
         implementation project(path: ':moduleB')
     }

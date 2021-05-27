@@ -1,8 +1,9 @@
-plugins {
-    id 'com.android.library'
-    id 'kotlin-android'
-    id 'kotlin-kapt'
-}
+if (isModule.toBoolean())
+    apply plugin: 'com.android.application'
+else
+    apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion basic.compileSdkVersion
@@ -14,11 +15,20 @@ android {
         versionCode basic.versionCode
         versionName basic.versionName
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            //加载不同位置的AndroidManifest
+            if (isModule.toBoolean()) {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
         }
     }
     compileOptions {
@@ -39,29 +49,10 @@ android {
 }
 
 dependencies {
-    api root.kotlin
-    api root.ktx_core
-    api root.appcompat
-    api root.material
-    api root.lifecycle_runtime
-    api root.lifecycle_livedata
-    api root.lifecycle_viewmodel
-    api root.lifecycle_extensions
-    api root.lifecycle_java8
-    api root.lifecycle_service
-    api root.lifecycle_process
 
-    api libs.arouter
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    implementation project(path: ':common')
     kapt libs.arouter_compiler
-
-//    api libs.vbutil
-
-    api libs.permissutil
-
-    api libs.gson
-
-    api libs.rcvadapter
-
-    api libs.glide
     kapt libs.glide_compiler
 }

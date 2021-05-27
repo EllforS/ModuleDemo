@@ -1,6 +1,5 @@
 package com.ellfors.common
 
-import android.view.View
 import com.ellfors.common.base.BaseActivity
 import com.ellfors.common.constants.RouterKey
 import com.ellfors.common.databinding.ActivitySplashBinding

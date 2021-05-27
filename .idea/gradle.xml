@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/moduleA" />
             <option value="$PROJECT_DIR$/moduleB" />
+            <option value="$PROJECT_DIR$/module_main" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

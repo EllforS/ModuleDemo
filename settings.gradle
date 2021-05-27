@@ -1,3 +1,4 @@
+include ':module_main'
 include ':common'
 include ':moduleB'
 include ':moduleA'

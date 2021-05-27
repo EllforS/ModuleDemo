@@ -5,8 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
-import com.dylanc.viewbinding.base.inflateBindingWithGeneric
+import com.ellfors.common.app.BaseApp
+import com.ellfors.common.livedata.ShareDataBus
+import com.ellfors.common.util.inflateBindingWithGeneric
 
 /**
  * BaseFragment
@@ -15,6 +18,7 @@ import com.dylanc.viewbinding.base.inflateBindingWithGeneric
 abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 
     private var _binding: VB? = null
+    lateinit var mShareDataBus: ShareDataBus
 
     val mBinding: VB
         get() = _binding!!
@@ -26,6 +30,7 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        mShareDataBus = ViewModelProvider(activity?.applicationContext as BaseApp).get(ShareDataBus::class.java)
         init()
     }
 

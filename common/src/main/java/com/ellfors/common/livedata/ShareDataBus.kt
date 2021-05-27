@@ -8,6 +8,6 @@ import androidx.lifecycle.ViewModel
  */
 class ShareDataBus : ViewModel() {
 
-    val mTestText = UnPeekLiveData<String?>()
+    val mTestText = UnPeekLiveData<String>()
 
 }

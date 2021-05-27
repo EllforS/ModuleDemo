@@ -17,8 +17,6 @@ ext {
 
             arouter_ver    : "1.5.1",
 
-            vbutil_ver     : "1.1.0",
-
             permissutil_ver: "2.0.3",
 
             gson_ver       : "2.8.2",
@@ -28,8 +26,8 @@ ext {
             glide_ver      : "4.12.0"
     ]
     root = [
-            kotlin              : "org.jetbrains.kotlin:kotlin-stdlib:$ver.kotlin_version",
-            ktx_core            : "androidx.core:core-ktx:$ver.ktx_core_version",
+            kotlin              : "org.jetbrains.kotlin:kotlin-stdlib:$ver.kotlin_ver",
+            ktx_core            : "androidx.core:core-ktx:$ver.ktx_core_ver",
             appcompat           : "androidx.appcompat:appcompat:$ver.appcompat_ver",
             material            : "com.google.android.material:material:$ver.material_ver",
             lifecycle_runtime   : "androidx.lifecycle:lifecycle-runtime-ktx:$ver.lifecycle_ver",
@@ -43,8 +41,6 @@ ext {
     libs = [
             arouter         : "com.alibaba:arouter-api:$ver.arouter_ver",
             arouter_compiler: "com.alibaba:arouter-compiler:$ver.arouter_ver",
-
-            vbutil          : "com.dylanc:viewbinding-base-ktx:$ver.vbutil_ver",
 
             permissutil     : "com.yanzhenjie:permission:$ver.permissutil_ver",
 

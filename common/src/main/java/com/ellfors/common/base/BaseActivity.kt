@@ -4,9 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
-import com.dylanc.viewbinding.base.inflateBindingWithGeneric
 import com.ellfors.common.app.BaseApp
 import com.ellfors.common.livedata.ShareDataBus
+import com.ellfors.common.util.inflateBindingWithGeneric
 
 /**
  * BaseActivity
